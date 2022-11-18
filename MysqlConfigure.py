@@ -3,7 +3,7 @@ import mysql.connector
 
 class MysqlConfigure:
     def __init__(self,input_len = 50,output_len = 10):
-        self.mydb = mysql.connector.connect(host="localhost", user="root", password="180060")
+        self.mydb = mysql.connector.connect(host="localhost", user="root", password="sahan")
         self.mycursor = self.mydb.cursor(buffered=True)
         self.input_len = input_len
         self.output_len = output_len

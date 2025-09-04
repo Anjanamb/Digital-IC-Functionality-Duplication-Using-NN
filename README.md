@@ -129,10 +129,9 @@ wandb.init(project="digital-ic-duplication", config=your_config_dict)
 2. Rename `NN for testing` to `nn_for_testing` to avoid spaces.  
 3. Add explicit entrypoints (e.g., `train.py`, `evaluate.py`) and show example CLI flags.  
 4. Add a `data/README.md` explaining the expected trace/text format and a small sample `.txt`.  
-5. Add unit / smoke tests for reproducibility.  
-6. Add a LICENSE file (MIT recommended, same as your dataset repo).  
-7. Document model architecture choices.  
-8. Add a usage example notebook.
+5. Add unit / smoke tests for reproducibility. 
+6. Document model architecture choices.  
+7. Add a usage example notebook.
 
 ---
 
@@ -146,7 +145,7 @@ wandb.init(project="digital-ic-duplication", config=your_config_dict)
 
 ## License
 
-If no LICENSE file is present, you may use MIT (same as dataset repo).
+MIT License – feel free to use, modify, and share. Please credit the repository if used in research or academic work.
 
 ---
 

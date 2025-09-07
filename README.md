@@ -8,9 +8,7 @@
 
 - [Overview](#overview)  
 - [Quickstart](#quickstart)  
-- [Dependencies](#dependencies)  
 - [Dataset / Data preparation](#dataset--data-preparation)  
-- [Project structure](#project-structure)  
 - [How to run (examples)](#how-to-run-examples)  
 - [Training tips & wandb](#training-tips--wandb)  
 - [Evaluation & expected outputs](#evaluation--expected-outputs)  
@@ -52,7 +50,7 @@ pip install numpy mysql-connector-python tensorflow Flask wandb keras-tuner
 
 ## Dataset / Data preparation
 
-This project uses datasets generated from VHDL designs and ModelSim/Quartus simulations. The dataset-preparation repository referenced in this project contains the scripts and designs used to produce the training traces (VHDL testbenches, schematic files, and dataset `.txt` traces). Please refer to that repository for the exact dataset-generation pipeline and file formats.
+This project uses datasets generated from VHDL designs and ModelSim/Quartus simulations. The dataset-preparation repository referenced in this project contains the scripts and designs used to produce the training traces (VHDL testbenches, schematic files, and dataset `.txt` traces). Please refer to that [Sequential Logic Datasets with Designs](https://github.com/Anjanamb/Sequential-Logic-Datasets-with-Designs) repository for the exact dataset-generation pipeline and file formats.
 
 Typical dataset items:
 - VHDL testbenches (`.vhd`) used to create stimuli.  

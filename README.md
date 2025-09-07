@@ -7,6 +7,8 @@
 ## Table of contents
 
 - [Overview](#overview)  
+- [Technical details](#technical-details)  
+- [Publication](#publication)  
 - [Quickstart](#quickstart)  
 - [Dataset / Data preparation](#dataset--data-preparation)  
 - [How to run (examples)](#how-to-run-examples)  
@@ -21,6 +23,24 @@
 ## Overview
 
 Digital circuits (counters, shift registers, LFSRs, etc.) can be represented as input → state → output mappings. This project collects traces from VHDL/Quartus/ModelSim simulations and uses them to train neural-network models that approximate the circuit's functional behaviour. The goal is *functionality duplication*: given the same inputs (and initial states), the trained NN should produce the same outputs as the original digital design.
+
+---
+
+## Technical details
+
+- **Model type:** Long Short-Term Memory (LSTM) networks were employed, as they are well-suited for capturing sequential dependencies in digital circuits.  
+- **Input format:** Time-aligned traces of input and internal states generated from VHDL/Quartus simulations.  
+- **Output format:** Predicted output traces that mirror the circuit’s original behaviour.  
+- **Training objective:** Minimize per-bit sequence error across multiple time steps, enabling the NN to reproduce both combinational and sequential logic accurately.  
+- **Tools used:** Python, TensorFlow/Keras, Quartus, ModelSim.
+
+---
+
+## Publication
+
+This work has been published in the **2023 IEEE 17th International Conference on Industrial and Information Systems (ICIIS)**:  
+
+[*Digital Integrated Circuit Functionality Duplication Using Neural Networks*](https://ieeexplore.ieee.org/document/10253575)  
 
 ---
 
@@ -66,7 +86,7 @@ Create a directory `data/` at repo root and place the generated `.txt` traces th
 
 ```
 Digital-IC-Functionality-Duplication-Using-NN/
-├─ Logic_Function/          # Logic designs / helper scripts (VHDL, schematics, generators)
+├─ Logic_Function/          # Logic designs / helper scripts (VHDL, scheatics, generators)
 ├─ NN for testing/          # Neural-network training / testing scripts and model code
 ├─ .gitignore
 └─ README.md                # <- you are replacing/updating this file
